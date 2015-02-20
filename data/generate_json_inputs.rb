@@ -10,6 +10,7 @@ CITIES_TO_GEO = File.read(CITIES_TO_GEO_FILENAME).split("\n").map do |line|
 	heb_name.gsub! /\+/, ' '
 	[ heb_name, { eng_name: eng_name, lat: lat, long: long, width: width, height: height }]
 end.to_h
+
 PARTIES_MAPPER_FILENAME = "parties_mapper.txt"
 PARTIES_MAPPER = File.read(PARTIES_MAPPER_FILENAME).split("\n").map do |r| 
 	t = r.split(",")
